@@ -14,6 +14,9 @@ return new class extends Migration
         Schema::create('tareas', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
+            $table->string("tarea");
+            $table->string("fecha_de_creacion");
+            $table->string("asignacion");
         });
     }
 

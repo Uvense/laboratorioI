@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\tarea;
 
 class TareaController extends Controller
 {
@@ -10,8 +11,8 @@ class TareaController extends Controller
      * Display a listing of the resource.
      */
     public function index()
-    {
-        //
+    {  
+        return  view('tarea.index');
     }
 
     /**
@@ -20,6 +21,9 @@ class TareaController extends Controller
     public function create()
     {
         //
+        $data ['tareas']=Tarea::all();
+        return view('tarea.create', $data);
+        
     }
 
     /**
@@ -28,6 +32,9 @@ class TareaController extends Controller
     public function store(Request $request)
     {
         //
+        $tarea = request()->except('_token');
+        Tarea::insert($tarea);
+        return redirect()->route('tarea.index');
     }
 
     /**
