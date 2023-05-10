@@ -43,6 +43,9 @@ class TareaController extends Controller
     public function show(string $id)
     {
         //
+    $tarea = Tarea::findOrFail($id);
+
+    return view('tarea.show', compact('tarea'));
     }
 
     /**

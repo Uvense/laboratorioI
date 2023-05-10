@@ -14,7 +14,11 @@
         <td> {{$tarea->tarea}}</td>
         <td>{{$tarea->fecha_de_creacion}}</td>
         <td>{{$tarea->asignacion}}</td> 
-        </tr>
+     
+        <td>
+        <a href="{{route('tarea.show', $tarea->id)}}">ver</a>
+        </td>
+    </tr>
     @endforeach
 </tbody>
 </table>
