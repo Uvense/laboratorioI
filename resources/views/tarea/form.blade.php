@@ -1,5 +1,5 @@
 Registro de trarea 
-
+<a 
 <label class="form-label">Tarea:</label>
 <input type="text" name="tarea" id="tarea" value="{{ isset($tarea)?$tarea->tarea:'' }}"><br/>
 @error('tarea')
