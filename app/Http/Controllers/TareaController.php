@@ -31,6 +31,8 @@ class TareaController extends Controller
      */
     public function store(Request $request)
     {
+        //Validar
+        request()->validate(Tarea::$validacion);
         //
         $tarea = request()->except('_token');
         Tarea::insert($tarea);
