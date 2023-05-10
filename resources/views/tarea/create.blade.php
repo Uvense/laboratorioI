@@ -1,3 +1,4 @@
+<a href="{{ url('tarea') }}">CREAR TAREAS</a>
 <table>
     <thead>
         <th>#</th>
@@ -16,7 +17,7 @@
         <td>{{$tarea->asignacion}}</td> 
      
         <td>
-        <a href="{{route('tarea.show', $tarea->id)}}">ver</a>
+        <a href="{{route('tarea.show', $tarea->id)}}" class="btn btn-success">ver</a>
         </td>
     </tr>
     @endforeach
